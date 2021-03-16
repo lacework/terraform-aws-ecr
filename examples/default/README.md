@@ -13,9 +13,7 @@ terraform {
 
 provider "lacework" {}
 
-provider "aws" {
-  region = "us-west-2"
-}
+provider "aws" {}
 
 module "lacework_ecr" {
   source  = "lacework/ecr/aws"
