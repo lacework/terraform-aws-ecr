@@ -4,7 +4,7 @@ output "external_id" {
 }
 
 output "iam_role_name" {
-  value       = var.iam_role_name
+  value       = local.iam_role_name
   description = "The IAM Role name"
 }
 
@@ -16,10 +16,4 @@ output "iam_role_arn" {
 output "registry_domain" {
   value       = local.registry_domain
   description = "The registry domain configured"
-}
-
-variable "lacework_integration_name" {
-  type        = string
-  default     = "TF ECR IAM Role"
-  description = "The name of the external ECR integration"
 }

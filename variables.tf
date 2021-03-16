@@ -51,3 +51,9 @@ variable "wait_time" {
   default     = "15s"
   description = "Amount of time to wait before the next resource is provisioned"
 }
+
+variable "lacework_integration_name" {
+  type        = string
+  default     = "TF ECR IAM Role"
+  description = "The name of the external ECR integration"
+}
