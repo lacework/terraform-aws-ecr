@@ -11,8 +11,22 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|----------|
+| registry_domain | The registry domain to configure | `string` | `""` | no |
+| use_existing_iam_role | Set this to true to use an existing IAM role | `bool` | `false` | no |
+| iam_role_arn | The IAM role ARN. required when setting use_existing_iam_role to true | `string` | `""` | no |
+| iam_role_external_id | The external ID configured inside the IAM role. required when setting use_existing_iam_role to true | `string` | `""` | no |
+| iam_role_name | The IAM role name. Required to match with iam_role_arn if use_existing_iam_role is set to true | `string` | `""` | no |
+| external_id_length | The length of the external ID to generate. Max length is 1224. Ignored when use_existing_iam_role is set to true | `number` | `16` | no |
+| lacework_aws_account_id | The Lacework AWS account that the IAM role will grant access | `string` | `"434813966438"` | no |
+| tags | A map/dictionary of Tags to be assigned to created resources | `map(string)` | `{}` | no |
+| wait_time | Amount of time to wait before the next resource is provisioned | `string` | `"15s"` | no |
+| lacework_integration_name | The name of the external ECR integration | `string` | `"TF ECR IAM ROLE"` | no | 
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| external_id | The external ID configured into the IAM role |
+| iam_role_name | The IAM Role name |
+| iam_role_arn | The IAM Role ARN |
+| registry_domain | The registry domain configured |
