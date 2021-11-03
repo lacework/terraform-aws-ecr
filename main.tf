@@ -41,4 +41,5 @@ resource "lacework_integration_ecr" "iam_role" {
     external_id = local.iam_role_external_id
   }
   depends_on = [time_sleep.wait_time]
+  tags                    = var.tags
 }
