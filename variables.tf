@@ -57,3 +57,9 @@ variable "lacework_integration_name" {
   default     = "TF ECR IAM Role"
   description = "The name of the external ECR integration"
 }
+
+variable "non_os_package_support" {
+  type        = bool
+  default     = false
+  description = "Whether or not the integration should check non-os packages in the container for vulnerabilities"
+}
