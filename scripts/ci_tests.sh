@@ -10,6 +10,8 @@ readonly project_name=terraform-aws-ecr
 
 TEST_CASES=(
   examples/default
+  examples/custom
+  examples/multi-region
 )
 
 log() {

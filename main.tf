@@ -34,8 +34,9 @@ resource "time_sleep" "wait_time" {
 }
 
 resource "lacework_integration_ecr" "iam_role" {
-  name            = var.lacework_integration_name
-  registry_domain = local.registry_domain
+  name                   = var.lacework_integration_name
+  registry_domain        = local.registry_domain
+  non_os_package_support = var.non_os_package_support
   credentials {
     role_arn    = local.iam_role_arn
     external_id = local.iam_role_external_id
