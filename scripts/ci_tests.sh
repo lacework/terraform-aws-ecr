@@ -12,6 +12,7 @@ TEST_CASES=(
   examples/default
   examples/custom
   examples/multi-region
+  examples/configure-lacework-ecr-integration
 )
 
 log() {

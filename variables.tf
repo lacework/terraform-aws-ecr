@@ -28,6 +28,24 @@ variable "iam_role_name" {
   description = "The IAM role name. Required to match with iam_role_arn if use_existing_iam_role is set to true"
 }
 
+variable "limit_by_tags" {
+  type        = list(string)
+  default     = []
+  description = "A list of tags to limit the assessment of images with matching tags. If you specify limit_by_tags and limit_by_label limits, they function as an AND."
+}
+
+variable "limit_by_labels" {
+  type        = map(string)
+  default     = {}
+  description = "A key based map of image labels to limit the assessment of images with matching labels. If you specify limit_by_tags and limit_by_label limits, they function as an AND."
+}
+
+variable "limit_by_repositories" {
+  type        = list(string)
+  default     = []
+  description = "A list of repositories to assess"
+}
+
 variable "external_id_length" {
   type        = number
   default     = 16
