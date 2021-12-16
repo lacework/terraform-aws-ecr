@@ -18,6 +18,7 @@ provider "aws" {}
 module "lacework_ecr" {
   source  = "lacework/ecr/aws"
   version = "~> 0.1"
+  non_os_package_support = true
 
   limit_by_tags         = ["example*"]
   limit_by_labels       = {example: "example"}

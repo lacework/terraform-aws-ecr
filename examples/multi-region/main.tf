@@ -10,6 +10,7 @@ module "lacework_ecr_west" {
   providers = {
     aws = aws.west2
   }
+  non_os_package_support = true
 }
 
 provider "aws" {
@@ -22,6 +23,7 @@ module "lacework_ecr_east" {
   providers = {
     aws = aws.west2
   }
+  non_os_package_support = true
   use_existing_iam_role = true
   iam_role_name         = module.lacework_ecr_west.iam_role_name
   iam_role_arn          = module.lacework_ecr_west.iam_role_arn

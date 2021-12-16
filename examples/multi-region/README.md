@@ -21,6 +21,7 @@ provider "aws" {
 
 module "lacework_ecr_west" {
   source = "../.."
+  non_os_package_support = true
   providers = {
     aws = aws.west2
   }
@@ -33,6 +34,7 @@ provider "aws" {
 
 module "lacework_ecr_east" {
   source = "../.."
+  non_os_package_support = true
   providers = {
     aws = aws.west2
   }
