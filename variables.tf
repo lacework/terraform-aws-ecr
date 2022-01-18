@@ -78,6 +78,6 @@ variable "lacework_integration_name" {
 
 variable "non_os_package_support" {
   type        = bool
-  default     = false
+  default     = true
   description = "Whether or not the integration should check non-os packages in the container for vulnerabilities"
 }

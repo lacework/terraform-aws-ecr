@@ -1,7 +1,10 @@
----
-name: Pull request template
-about: 'type(scope): Subject of the pull request '
----
+<!--
+  Thanks for submitting a pull request!
+  We appreciate you spending the time to work on these changes.
+  Please provide enough information so that others can review your pull request.
+  
+  Please read the contribution document: https://github.com/lacework/terraform-gcp-gcr/blob/main/CONTRIBUTING.md
+--->
 
 ***Issue***: Include link to the Jira/Github Issue
 
