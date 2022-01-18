@@ -3,7 +3,7 @@
   We appreciate you spending the time to work on these changes.
   Please provide enough information so that others can review your pull request.
   
-  Please read the contribution document: https://github.com/lacework/terraform-gcp-gcr/blob/main/CONTRIBUTING.md
+  Please read the contribution document: https://github.com/lacework/terraform-aws-ecr/blob/main/CONTRIBUTING.md
 --->
 
 ***Issue***: Include link to the Jira/Github Issue
