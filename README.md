@@ -21,7 +21,7 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 | tags                      | A map/dictionary of Tags to be assigned to created resources                                                     | `map(string)` | `{}`                | no       |
 | wait_time                 | Amount of time to wait before the next resource is provisioned                                                   | `string`      | `"15s"`             | no       |
 | lacework_integration_name | The name of the external ECR integration                                                                         | `string`      | `"TF ECR IAM ROLE"` | no       |
-| non_os_package_support    | Whether or not the integration should check non-os packages in the container for vulnerabilities                 | `bool`        | `false`             | no       |
+| non_os_package_support    | Whether or not the integration should check non-os packages in the container for vulnerabilities                 | `bool`        | `true`             | no       |
 | `limit_by_tags` |A list of image tags to limit the assessment of images with matching tags. If you specify limit_by_tags and limit_by_labels limits, they function as an AND. Supported field input can be ["mytext\*mytext", "mytext", "mytext\*", "mytext". Only one * wildcard is supported.| `list(string)` | no |
 | `limit_by_labels` |A list of image labels to limit the assessment of images with matching labels. If you specify limit_by_tags and limit_by_labels limits, they function as an AND. Supported field input can be ["mytext\*mytext", "mytext", "mytext*", "mytext"].Only one * wildcard is supported.| `list(string)` | no |
 | `limit_by_repositories` |A list of repositories to assess.| `list(string)` | no |
