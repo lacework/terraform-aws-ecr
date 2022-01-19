@@ -12,5 +12,5 @@
 Provide a detailed description of the changes made by this pull request.
 
 ***Additional Info:***
-Include any other relevant information such as how to use the new fuctionality, screenshots, etc.
+Include any other relevant information such as how to use the new functionality, screenshots, etc.
 
