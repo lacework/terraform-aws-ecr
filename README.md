@@ -25,6 +25,7 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 | `limit_by_tags` |A list of image tags to limit the assessment of images with matching tags. If you specify limit_by_tags and limit_by_labels limits, they function as an AND. Supported field input can be ["mytext\*mytext", "mytext", "mytext\*", "mytext". Only one * wildcard is supported.| `list(string)` | no |
 | `limit_by_labels` |A list of image labels to limit the assessment of images with matching labels. If you specify limit_by_tags and limit_by_labels limits, they function as an AND. Supported field input can be ["mytext\*mytext", "mytext", "mytext*", "mytext"].Only one * wildcard is supported.| `list(string)` | no |
 | `limit_by_repositories` |A list of repositories to assess.| `list(string)` | no |
+| `limit_num_imgs` |The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15. Defaults to 5.| `number` | 5 | no |
 
 ## Outputs
 

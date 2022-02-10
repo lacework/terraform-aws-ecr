@@ -46,6 +46,17 @@ variable "limit_by_repositories" {
   description = "A list of repositories to assess"
 }
 
+variable "limit_num_imgs" {
+  type        = number
+  default     = 5
+  description = "The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15. Defaults to 5."
+
+  validation {
+    condition     = contains([5, 10, 15], var.limit_num_imgs)
+    error_message = "The limit_num_imgs variable must be one of 5, 10, or 15."
+  }
+}
+
 variable "external_id_length" {
   type        = number
   default     = 16
