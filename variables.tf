@@ -46,6 +46,12 @@ variable "limit_by_repositories" {
   description = "A list of repositories to assess"
 }
 
+variable "limit_num_imgs" {
+  type        = number
+  default     = 5
+  description = "The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15. Defaults to 5."
+}
+
 variable "external_id_length" {
   type        = number
   default     = 16
