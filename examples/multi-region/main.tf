@@ -20,7 +20,7 @@ provider "aws" {
 module "lacework_ecr_east" {
   source = "../.."
   providers = {
-    aws = aws.west2
+    aws = aws.east1
   }
   use_existing_iam_role = true
   iam_role_name         = module.lacework_ecr_west.iam_role_name
