@@ -1,7 +1,7 @@
 # Release Notes
-Another day, another release. These are the release notes for the version `v0.6.0`.
+Another day, another release. These are the release notes for the version `v0.7.0`.
 
 ## Features
-* feat: allow use of v4 aws provider (#28) (Darren)([d66e343](https://github.com/lacework/terraform-aws-ecr/commit/d66e343bc52f9a3cc3a0faa1ea0e459e475d135a))
+* feat: deprecate support for Terraform 0.12 and 0.13 (#31) (Darren)([cb65e76](https://github.com/lacework/terraform-aws-ecr/commit/cb65e763c2e140f63f94aa267ee0ca116c1ee3c7))
 ## Other Changes
-* ci: version bump to v0.5.1-dev (Lacework)([dae6050](https://github.com/lacework/terraform-aws-ecr/commit/dae6050e17949032f85edf05976e2e73e31fb820))
+* ci: version bump to v0.6.1-dev (Lacework)([f241dfc](https://github.com/lacework/terraform-aws-ecr/commit/f241dfc3457cef06a9f71ad5201bbe2169b2d520))
