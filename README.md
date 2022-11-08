@@ -13,7 +13,7 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0, < 5.0.0 |
-| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 0.11 |
+| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 1.0 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.6 |
 
 ## Providers
@@ -21,7 +21,7 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0, < 5.0.0 |
-| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 0.11 |
+| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 1.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.6 |
 
 ## Inputs
