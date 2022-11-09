@@ -1,7 +1,8 @@
 # Release Notes
-Another day, another release. These are the release notes for the version `v0.7.1`.
+Another day, another release. These are the release notes for the version `v0.7.2`.
 
-## Bug Fixes
-* fix: set lacework provider to minimum version for api v2 migration (#33) (Darren)([642baf5](https://github.com/lacework/terraform-aws-ecr/commit/642baf5f798abc6f90e90426df0b3c86e6712fd0))
+## Documentation Updates
+* docs: update Lacework provider version in readme (#36) (Darren)([22ab188](https://github.com/lacework/terraform-aws-ecr/commit/22ab188574ad3448dac60643dd8b6c667ca0328a))
 ## Other Changes
-* ci: version bump to v0.7.1-dev (Lacework)([0b1c61a](https://github.com/lacework/terraform-aws-ecr/commit/0b1c61a5213c6cc8890116cb5f69059b71f602c6))
+* chore: update Lacework provider version to v1 (#35) (Darren)([72e8e1e](https://github.com/lacework/terraform-aws-ecr/commit/72e8e1e18e8ac5a05593399b8bbe73c7bad28786))
+* ci: version bump to v0.7.2-dev (Lacework)([ad11454](https://github.com/lacework/terraform-aws-ecr/commit/ad11454019447f4c0109b7836e4bcbc91d7a6480))
