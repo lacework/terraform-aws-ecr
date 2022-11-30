@@ -35,9 +35,12 @@ variable "limit_by_tags" {
 }
 
 variable "limit_by_labels" {
-  type        = map(string)
-  default     = {}
-  description = "A key based map of image labels to limit the assessment of images with matching labels. If you specify limit_by_tags and limit_by_label limits, they function as an AND."
+  type = list(object({
+    key   = string
+    value = string
+  }))
+  default     = []
+  description = "A list of objects with image labels to limit the assessment of images with matching labels. If you specify limit_by_tags and limit_by_label limits, they function as an AND."
 }
 
 variable "limit_by_repositories" {
