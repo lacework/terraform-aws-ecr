@@ -42,7 +42,13 @@ resource "lacework_integration_ecr" "iam_role" {
     external_id = local.iam_role_external_id
   }
   limit_by_tags         = var.limit_by_tags
-  limit_by_labels       = var.limit_by_labels
+  dynamic "limit_by_label" {
+    for_each = var.limit_by_labels
+    content {
+      key     = limit_by_label.value.key
+      value   = limit_by_label.value.value
+    }
+  }
   limit_by_repositories = var.limit_by_repositories
   limit_num_imgs        = var.limit_num_imgs
   depends_on            = [time_sleep.wait_time]
