@@ -55,12 +55,6 @@ variable "limit_num_imgs" {
   description = "The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15. Defaults to 5."
 }
 
-variable "external_id_length" {
-  type        = number
-  default     = 16
-  description = "The length of the external ID to generate. Max length is 1224. Ignored when use_existing_iam_role is set to true"
-}
-
 variable "lacework_aws_account_id" {
   type        = string
   default     = "434813966438"
