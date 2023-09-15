@@ -12,11 +12,10 @@ data "aws_caller_identity" "current" {}
 
 module "lacework_ecr_iam_role" {
   source                  = "lacework/iam-role/aws"
-  version                 = "~> 0.2"
+  version                 = "~> 0.4"
   create                  = var.use_existing_iam_role ? false : true
   iam_role_name           = var.iam_role_name
   lacework_aws_account_id = var.lacework_aws_account_id
-  external_id_length      = var.external_id_length
   tags                    = var.tags
 }
 
@@ -41,12 +40,12 @@ resource "lacework_integration_ecr" "iam_role" {
     role_arn    = local.iam_role_arn
     external_id = local.iam_role_external_id
   }
-  limit_by_tags         = var.limit_by_tags
+  limit_by_tags = var.limit_by_tags
   dynamic "limit_by_label" {
     for_each = var.limit_by_labels
     content {
-      key     = limit_by_label.value.key
-      value   = limit_by_label.value.value
+      key   = limit_by_label.value.key
+      value = limit_by_label.value.value
     }
   }
   limit_by_repositories = var.limit_by_repositories
