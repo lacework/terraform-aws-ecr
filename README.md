@@ -44,7 +44,6 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_external_id_length"></a> [external\_id\_length](#input\_external\_id\_length) | The length of the external ID to generate. Max length is 1224. Ignored when use\_existing\_iam\_role is set to true | `number` | `16` | no |
 | <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | The IAM role ARN. required when setting use\_existing\_iam\_role to true | `string` | `""` | no |
 | <a name="input_iam_role_external_id"></a> [iam\_role\_external\_id](#input\_iam\_role\_external\_id) | The external ID configured inside the IAM role. required when setting use\_existing\_iam\_role to true | `string` | `""` | no |
 | <a name="input_iam_role_name"></a> [iam\_role\_name](#input\_iam\_role\_name) | The IAM role name. Required to match with iam\_role\_arn if use\_existing\_iam\_role is set to true | `string` | `""` | no |
