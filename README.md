@@ -7,12 +7,13 @@
 
 A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0, < 5.0.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0 |
 | <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 1.1 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.6 |
 
@@ -20,15 +21,15 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0, < 5.0.0 |
-| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 1.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
+| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 1.1 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.6 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_lacework_ecr_iam_role"></a> [lacework\_ecr\_iam\_role](#module\_lacework\_ecr\_iam\_role) | lacework/iam-role/aws | ~> 0.2 |
+| <a name="module_lacework_ecr_iam_role"></a> [lacework\_ecr\_iam\_role](#module\_lacework\_ecr\_iam\_role) | lacework/iam-role/aws | ~> 0.4 |
 
 ## Resources
 
@@ -44,6 +45,7 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_external_id_length"></a> [external\_id\_length](#input\_external\_id\_length) | **Deprecated** - Will be removed on our next major release v1.0.0 | `number` | `16` | no |
 | <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | The IAM role ARN. required when setting use\_existing\_iam\_role to true | `string` | `""` | no |
 | <a name="input_iam_role_external_id"></a> [iam\_role\_external\_id](#input\_iam\_role\_external\_id) | The external ID configured inside the IAM role. required when setting use\_existing\_iam\_role to true | `string` | `""` | no |
 | <a name="input_iam_role_name"></a> [iam\_role\_name](#input\_iam\_role\_name) | The IAM role name. Required to match with iam\_role\_arn if use\_existing\_iam\_role is set to true | `string` | `""` | no |
@@ -67,3 +69,4 @@ A Terraform Module to integrate Amazon Container Registries (ECR) with Lacework.
 | <a name="output_iam_role_arn"></a> [iam\_role\_arn](#output\_iam\_role\_arn) | The IAM Role ARN |
 | <a name="output_iam_role_name"></a> [iam\_role\_name](#output\_iam\_role\_name) | The IAM Role name |
 | <a name="output_registry_domain"></a> [registry\_domain](#output\_registry\_domain) | The registry domain configured |
+<!-- END_TF_DOCS -->
