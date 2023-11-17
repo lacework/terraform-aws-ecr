@@ -13,7 +13,7 @@ data "aws_caller_identity" "current" {}
 module "lacework_ecr_iam_role" {
   #  source                  = "lacework/iam-role/aws" 
   #  version                 = "~> 0.4"
-  source                  = "git::https://github.com/lacework/terraform-aws-iam-role.git?ref=tmacdonald/grow-2447/use-external-IAM-role"
+  source                  = "git::https://github.com/lacework/terraform-aws-iam-role.git?ref=main"
   create                  = var.use_existing_iam_role ? false : true
   iam_role_name           = var.iam_role_name
   lacework_aws_account_id = var.lacework_aws_account_id
