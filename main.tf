@@ -5,6 +5,9 @@ locals {
   iam_role_arn         = module.lacework_ecr_iam_role.created ? module.lacework_ecr_iam_role.arn : var.iam_role_arn
   iam_role_name        = module.lacework_ecr_iam_role.created ? module.lacework_ecr_iam_role.name : var.iam_role_name
   iam_role_external_id = module.lacework_ecr_iam_role.created ? module.lacework_ecr_iam_role.external_id : var.iam_role_external_id
+  version_file   = "${abspath(path.module)}/VERSION"
+  module_name    = basename(abspath(path.module))
+  module_version = fileexists(local.version_file) ? file(local.version_file) : ""
 }
 
 data "aws_region" "current" {}
@@ -51,4 +54,9 @@ resource "lacework_integration_ecr" "iam_role" {
   limit_by_repositories = var.limit_by_repositories
   limit_num_imgs        = var.limit_num_imgs
   depends_on            = [time_sleep.wait_time]
+}
+
+data "lacework_metric_module" "lwmetrics" {
+  name    = local.module_name
+  version = local.module_version
 }
