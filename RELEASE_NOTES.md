@@ -1,7 +1,8 @@
 # Release Notes
-Another day, another release. These are the release notes for the version `v0.9.0`.
+Another day, another release. These are the release notes for the version `v0.9.1`.
 
-## Features
-* feat: enforce External ID v2 format via iam-role module (#48) (djmctavish)([2b326ad](https://github.com/lacework/terraform-aws-ecr/commit/2b326ad7d13d0fa8399ded038e9015e4433cb07d))
+## Documentation Updates
+* docs(readme): add terraform docs automation (#50) (Timothy MacDonald)([0051eb6](https://github.com/lacework/terraform-aws-ecr/commit/0051eb6b82c5045626b3cc6db2b15b58e378dd4f))
 ## Other Changes
-* ci: version bump to v0.8.1-dev (Lacework)([dc494a6](https://github.com/lacework/terraform-aws-ecr/commit/dc494a602e2df616c93d402075779a722a6ba088))
+* chore: add lacework_metric_module datasource (#51) (Darren)([c361855](https://github.com/lacework/terraform-aws-ecr/commit/c36185548a76a294c01a520e528516edf5609111))
+* ci: version bump to v0.9.1-dev (Lacework)([6b4ef04](https://github.com/lacework/terraform-aws-ecr/commit/6b4ef048e4390ed2eb367ac555c35f0e12ecf108))
