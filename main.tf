@@ -6,7 +6,7 @@ locals {
   iam_role_name        = module.lacework_ecr_iam_role.created ? module.lacework_ecr_iam_role.name : var.iam_role_name
   iam_role_external_id = module.lacework_ecr_iam_role.created ? module.lacework_ecr_iam_role.external_id : var.iam_role_external_id
   version_file   = "${abspath(path.module)}/VERSION"
-  module_name    = basename(abspath(path.module))
+  module_name    = "terraform-aws-ecr"
   module_version = fileexists(local.version_file) ? file(local.version_file) : ""
 }
 
